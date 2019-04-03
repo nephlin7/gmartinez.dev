@@ -158,11 +158,43 @@ button:focus {
     right: -200px;
     transform: translateY(-50%);
     box-shadow: 0 16px 48px rgba(45, 45, 45, 0.31);
-    border-radius: 6px;
     opacity: 0;
+
+}
+.hero-image img {
+    border-radius: 6px;
 }
 @media(min-width:993px) {
     .hero-image {
         opacity: 1;
     }
 }
+
+.tracking-in-expand {
+    animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+

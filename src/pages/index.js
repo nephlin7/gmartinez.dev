@@ -45,7 +45,7 @@ const IndexPage = () => (
                 <span style={{
                     color: `#6f6f6f`
                 }}>Front End Dev</span>
-                <h1 className="main-title">Gerald Martinez</h1>
+                <h1 className="main-title tracking-in-expand ">Gerald Martinez</h1>
                 <p
                     style={{
                     lineHeight: `27px`,
@@ -55,10 +55,15 @@ const IndexPage = () => (
                     Hi, Im a Front-End dev based in Nicaragua.
                     <br/>
                     I love working with
+
                     <a
                         rel="noreferrer noopener"
                         href={`https://twitter.com/hashtag/JAMstack?src=hash&lang=es`}
-                        target={`_blank`}>
+                        target={`_blank`}
+                        style={{
+                        marginLeft: 10,
+                        marginRight: 10
+                    }}>
                         #JAMSTACK
                     </a>
                     <span aria-label="laptop" role="img">

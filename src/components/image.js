@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import {StaticQuery, graphql} from "gatsby"
 import Img from "gatsby-image"
 
 /*
@@ -14,19 +14,12 @@ import Img from "gatsby-image"
  */
 
 const DevImage = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        placeholderImage: file(relativePath: { eq: "dev.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1266) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `}
-    render={data => <Img alt="Gerald Martinez dev" fluid={data.placeholderImage.childImageSharp.fluid} />}
-  />
+    <StaticQuery
+        query={graphql ` query { placeholderImage: file(relativePath: { eq: "dev.jpg" }) { childImageSharp { fluid(maxWidth: 1266) { ...GatsbyImageSharpFluid } } } } `}
+        render={data => <Img
+        className={`fade-in`}
+        fadeIn="true"
+        alt="Gerald Martinez dev"
+        fluid={data.placeholderImage.childImageSharp.fluid}/>}/>
 )
 export default DevImage
