@@ -3,7 +3,7 @@ module.exports = {
     title: `Gerald Martinez`,
     description: `Gerald Martinez website resume`,
     author: `@GeraldM_92`,
-    seoImageUrl: `default-seo.png`,
+    seoImageUrl: `images/default-seo.png`,
     siteUrl: `https://gmartinez.dev/`
   },
   plugins: [
