@@ -15,10 +15,9 @@ import Img from "gatsby-image"
 
 const DevImage = () => (
     <StaticQuery
-        query={graphql ` query { placeholderImage: file(relativePath: { eq: "dev.jpg" }) { childImageSharp { fluid(maxWidth: 1266) { ...GatsbyImageSharpFluid } } } } `}
+        query={graphql ` query { placeholderImage: file(relativePath: { eq: "dev.jpg" }) { childImageSharp { fluid(maxWidth: 1266) { ...GatsbyImageSharpFluid_noBase64 } } } } `}
         render={data => <Img
         className={`fade-in`}
-        fadeIn="true"
         alt="Gerald Martinez dev"
         fluid={data.placeholderImage.childImageSharp.fluid}/>}/>
 )
