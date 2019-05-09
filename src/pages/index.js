@@ -1,10 +1,9 @@
-import React from "react"
 import Layout from "../components/layout"
 import DevImage from "../components/image"
 import SEO from "../components/seo"
-import gitHubIcon from "../images/github.svg"
-import twitterIcon from "../images/twitter.svg"
-import linkedinIcon from "../images/linkedin.svg"
+
+import SocialIcons from "../components/social-icons"
+
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 
@@ -25,52 +24,25 @@ const Home = () => (
         justifyContent: `space-between`,
       }}
     >
+       <div
+        css={{
+          position: `absolute`,
+          top: 30,
+          right: 30,
+        }}
+      >
+       <a css={{color:`#333`,textDecoration:`none`}} href={`mailto:g7devp@gmail.com`}>Contact</a>
+      </div>
       <div
         css={{
           position: `absolute`,
-          bottom: 20,
-          right: 20,
+          bottom: 30,
+          right: 30,
         }}
       >
-        <a
-          css={{
-            marginRight: 5,
-          }}
-          rel={`noopener noreferrer`}
-          target={`_blank`}
-          href={`https://github.com/nephlin7`}
-        >
-          <img title="GitHub" alt={`nephlin7`} width="30" src={gitHubIcon} />
-        </a>
-        <a
-          css={{
-            marginRight: 5,
-          }}
-          rel={`noopener noreferrer`}
-          target={`_blank`}
-          href={`https://twitter.com/GeraldM_92`}
-        >
-          <img
-            title="Follow me on twitter"
-            alt={`@GeraldM_92`}
-            width="30"
-            src={twitterIcon}
-          />
-        </a>
-        <a
-          rel={`noopener noreferrer`}
-          target={`_blank`}
-          href={`https://www.linkedin.com/in/gmartinez92/`}
-        >
-          <img
-            title="Linkedin"
-            alt={`gmartinez92`}
-            width="30"
-            src={linkedinIcon}
-          />
-        </a>
+        <SocialIcons />
       </div>
-      <div
+      <section
         css={{
           position: `relative`,
           width: `40%`,
@@ -89,15 +61,15 @@ const Home = () => (
         <div className="hero-image">
           <DevImage />
         </div>
-      </div>
+      </section>
 
-      <div className="info-area">
+      <section className="info-area">
         <span
           css={{
             color: `#6f6f6f`,
           }}
         >
-          Front End Dev
+          Web Developer
         </span>
         <h1 className="main-title tracking-in-expand ">Gerald Martinez</h1>
         <p
@@ -106,11 +78,8 @@ const Home = () => (
             marginBottom: `15px`,
           }}
         >
-          <span role="img" aria-label="code">
-            👨‍💻
-          </span>
-          Hi, Im a Front-End dev based in Nicaragua.
-          <br />I love working with
+          I am a Front-End web developer based in Nicaragua. Actually i'm <br /> in love
+          working with
           <a
             rel="noreferrer noopener"
             href={`https://twitter.com/hashtag/JAMstack?src=hash&lang=es`}
@@ -125,13 +94,23 @@ const Home = () => (
           <span aria-label="laptop" role="img">
             💻
           </span>
+          <span role="img" aria-label="code">
+            👨‍💻
+          </span>
         </p>
 
         <br />
-        <a className="button -dark center" href="/docs/gmartinezcv2019.pdf">
+        <a
+          css={{
+            borderRadius: 25,
+            padding: `14px 28px`,
+          }}
+          className="button -dark center"
+          href="/docs/gmartinezcv2019.pdf"
+        >
           Download Resume
         </a>
-      </div>
+      </section>
     </div>
   </Layout>
 )
