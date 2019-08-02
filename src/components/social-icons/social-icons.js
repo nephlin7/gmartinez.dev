@@ -2,6 +2,7 @@ import React from "react"
 import gitHubIcon from "../../images/github.svg"
 import twitterIcon from "../../images/twitter.svg"
 import linkedinIcon from "../../images/linkedin.svg"
+import dribble from "../../images/dribble.svg"
 
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
@@ -35,6 +36,9 @@ const SocialIcons = () => {
         />
       </a>
       <a
+        css={{
+          marginRight: 5,
+        }}
         rel={`noopener noreferrer`}
         target={`_blank`}
         href={`https://www.linkedin.com/in/gmartinez92/`}
@@ -45,6 +49,13 @@ const SocialIcons = () => {
           width="30"
           src={linkedinIcon}
         />
+      </a>
+      <a
+        rel={`noopener noreferrer`}
+        target={`_blank`}
+        href={`https://dribbble.com/geraldM`}
+      >
+        <img title="Dribble" alt={`gmartinez92`} width="30" src={dribble} />
       </a>
     </>
   )
