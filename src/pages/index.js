@@ -33,6 +33,12 @@ const Home = () => (
         }}
       >
         <a
+          css={{ color: `#333`, textDecoration: `none`, marginRight: 20 }}
+          href="/docs/gmartinezcv2019.pdf"
+        >
+          Download Resume
+        </a>
+        <a
           css={{ color: `#333`, textDecoration: `none` }}
           href={`mailto:g7devp@gmail.com`}
         >
@@ -106,16 +112,6 @@ const Home = () => (
         </p>
 
         <br />
-        {/* <a
-          css={{
-            borderRadius: 25,
-            padding: `14px 28px`,
-          }}
-          className="button -dark center"
-          href="/docs/gmartinezcv2019.pdf"
-        >
-          Download Resume
-        </a> */}
         <Link
           css={{
             borderRadius: 25,
