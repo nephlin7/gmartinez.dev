@@ -6,6 +6,7 @@
   "author": "Gerald Martinez <g7devp@gmail.com>",
   "dependencies": {
     "@emotion/core": "^10.0.21",
+    "@emotion/styled": "^10.0.27",
     "gatsby": "^2.15.36",
     "gatsby-image": "^2.2.27",
     "gatsby-plugin-google-analytics": "^2.1.21",

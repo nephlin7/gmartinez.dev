@@ -1,6 +1,7 @@
 import Layout from "../components/layout"
 import DevImage from "../components/image"
 import SEO from "../components/seo"
+import { Link } from "gatsby"
 
 import SocialIcons from "../components/social-icons"
 
@@ -24,14 +25,19 @@ const Home = () => (
         justifyContent: `space-between`,
       }}
     >
-       <div
+      <div
         css={{
           position: `absolute`,
           top: 30,
           right: 30,
         }}
       >
-       <a css={{color:`#333`,textDecoration:`none`}} href={`mailto:g7devp@gmail.com`}>Contact</a>
+        <a
+          css={{ color: `#333`, textDecoration: `none` }}
+          href={`mailto:g7devp@gmail.com`}
+        >
+          Contact
+        </a>
       </div>
       <div
         css={{
@@ -78,8 +84,8 @@ const Home = () => (
             marginBottom: `15px`,
           }}
         >
-          I am a Front-End web developer based in Nicaragua. Actually i'm <br /> in love
-          working with
+          I am a Front-End web developer based in Nicaragua. Actually i'm <br />{" "}
+          in love working with
           <a
             rel="noreferrer noopener"
             href={`https://twitter.com/hashtag/JAMstack?src=hash&lang=es`}
@@ -100,7 +106,7 @@ const Home = () => (
         </p>
 
         <br />
-        <a
+        {/* <a
           css={{
             borderRadius: 25,
             padding: `14px 28px`,
@@ -109,7 +115,17 @@ const Home = () => (
           href="/docs/gmartinezcv2019.pdf"
         >
           Download Resume
-        </a>
+        </a> */}
+        <Link
+          css={{
+            borderRadius: 25,
+            padding: `14px 28px`,
+          }}
+          className="button -dark center"
+          to="/works"
+        >
+          View Work
+        </Link>
       </section>
     </div>
   </Layout>

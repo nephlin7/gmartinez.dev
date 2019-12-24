@@ -8,11 +8,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-
+/** @jsx jsx */
+import { jsx } from "@emotion/core"
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => (
+const Layout = ({ children, pageTitle }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -26,12 +27,27 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-          <main>{children}</main>
-          {/* <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer> */}
+        <main>
+          <section
+            css={{
+              position: `absolute`,
+              width: `20%`,
+              height: `100vh`,
+              textAlign: `center`,
+              lineHeight: `3.5rem`,
+              fontSize: `2rem`,
+              background: `linear-gradient(to top, #09203f 0%, #537895 100%)`,
+              color: `white`,
+              display: `flex`,
+              alignItems: `center`,
+              justifyContent: `center`,
+              flexDirection: `column`,
+            }}
+          >
+            {pageTitle}
+          </section>
+          {children}
+        </main>
       </>
     )}
   />
