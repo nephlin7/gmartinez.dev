@@ -24,14 +24,19 @@ const Home = () => (
         justifyContent: `space-between`,
       }}
     >
-       <div
+      <div
         css={{
           position: `absolute`,
           top: 30,
           right: 30,
         }}
       >
-       <a css={{color:`#333`,textDecoration:`none`}} href={`mailto:g7devp@gmail.com`}>Contact</a>
+        <a
+          css={{ color: `#333`, textDecoration: `none` }}
+          href={`mailto:g7devp@gmail.com`}
+        >
+          Contact
+        </a>
       </div>
       <div
         css={{
@@ -69,7 +74,7 @@ const Home = () => (
             color: `#6f6f6f`,
           }}
         >
-          Web Developer
+          Front-end Developer
         </span>
         <h1 className="main-title tracking-in-expand ">Gerald Martinez</h1>
         <p
@@ -78,8 +83,9 @@ const Home = () => (
             marginBottom: `15px`,
           }}
         >
-          I am a Front-End web developer based in Nicaragua. Actually i'm <br /> in love
-          working with
+          Front-End web developer based in Nicaragua with 4+ years of
+          experience. Currently, I'm working at <strong>Bejamas</strong> as a
+          Front-end dev, building great stuff with
           <a
             rel="noreferrer noopener"
             href={`https://twitter.com/hashtag/JAMstack?src=hash&lang=es`}
@@ -87,20 +93,16 @@ const Home = () => (
             css={{
               marginLeft: 10,
               marginRight: 10,
+              color: "#537895",
             }}
           >
-            #JAMSTACK
+            #JAMstack
           </a>
-          <span aria-label="laptop" role="img">
-            💻
-          </span>
-          <span role="img" aria-label="code">
-            👨‍💻
-          </span>
+          technologies.
         </p>
 
         <br />
-        <a
+        {/* <a
           css={{
             borderRadius: 25,
             padding: `14px 28px`,
@@ -109,7 +111,7 @@ const Home = () => (
           href="/docs/gmartinezcv2019.pdf"
         >
           Download Resume
-        </a>
+        </a> */}
       </section>
     </div>
   </Layout>

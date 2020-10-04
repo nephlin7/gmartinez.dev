@@ -12,7 +12,7 @@ const SocialIcons = () => {
     <>
       <a
         css={{
-          marginRight: 5,
+          marginRight: 10,
         }}
         rel={`noopener noreferrer`}
         target={`_blank`}
@@ -22,7 +22,7 @@ const SocialIcons = () => {
       </a>
       <a
         css={{
-          marginRight: 5,
+          marginRight: 10,
         }}
         rel={`noopener noreferrer`}
         target={`_blank`}
@@ -37,7 +37,7 @@ const SocialIcons = () => {
       </a>
       <a
         css={{
-          marginRight: 5,
+          marginRight: 10,
         }}
         rel={`noopener noreferrer`}
         target={`_blank`}
