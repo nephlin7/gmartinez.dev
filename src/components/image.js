@@ -1,37 +1,15 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import Image from "next/image"
 
-/*
- * This component is built using `gatsby-image` to automatically serve optimized
- * images with lazy loading and reduced file sizes. The image is loaded using a
- * `StaticQuery`, which allows us to load the image from directly within this
- * component, rather than having to pass the image data down from pages.
- *
- * For more information, see the docs:
- * - `gatsby-image`: https://gatsby.dev/gatsby-image
- * - `StaticQuery`: https://gatsby.dev/staticquery
- */
+const DevImage = () => {
+  return (
+    <Image
+      className="devImage"
+      alt="Gerald Martinez dev"
+      width="518"
+      height="600"
+      src="/images/dev_2020.jpg"
+    />
+  )
+}
 
-const DevImage = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        placeholderImage: file(relativePath: { eq: "dev_2020.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1266) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <Img
-        alt="Gerald Martinez dev"
-        fluid={data.placeholderImage.childImageSharp.fluid}
-      />
-    )}
-  />
-)
 export default DevImage
