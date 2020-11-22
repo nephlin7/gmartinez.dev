@@ -4,5 +4,5 @@ export default {
   author: `@GeraldM_92`,
   seoImageUrl: `images/default-seo.png`,
   siteUrl: `https://gmartinez.dev/`,
-  trackingId: "UA-137038166-1",
+  gaTrackingId: "UA-137038166-1",
 }
