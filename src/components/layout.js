@@ -11,6 +11,9 @@ const Layout = ({ children }) => {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <link rel="shortcut icon" href="/favicon.svg" />
+        <meta name="msapplication-TileColor" content="#4c708a" />
+        <meta name="theme-color" content="#4c708a" />
         <title>{config.title}</title>
         <meta name="title" content={config?.title} />
         <meta name="description" content={config?.description} />
