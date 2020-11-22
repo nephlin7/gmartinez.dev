@@ -7,7 +7,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {!process.env.NODE_ENV === "development" && (
+          {process.env.VERCEL_ENV === "production" && (
             <>
               <script
                 async
