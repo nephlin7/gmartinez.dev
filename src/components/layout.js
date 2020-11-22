@@ -1,42 +1,36 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
-import React from "react"
+import Head from "next/head"
+import config from "@/utils/config"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import "./layout.css"
+const Layout = ({ children }) => {
+  return (
+    <main>
+      <Head>
+        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <title>{config.title}</title>
+        <meta name="title" content={config?.title} />
+        <meta name="description" content={config?.description} />
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-          <main>{children}</main>
-          {/* <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer> */}
-      </>
-    )}
-  />
-)
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={config?.siteUrl} />
+        <meta property="og:title" content={config?.title} />
+        <meta property="og:description" content={config?.description} />
+        <meta property="og:image" content={config?.seoImageUrl} />
 
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={config?.siteUrl} />
+        <meta property="twitter:title" content={config?.title} />
+        <meta property="twitter:description" content={config?.description} />
+        <meta property="twitter:image" content={config?.seoImageUrl} />
+      </Head>
+      {children}
+    </main>
+  )
+}
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }

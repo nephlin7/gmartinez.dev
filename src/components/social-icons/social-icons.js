@@ -1,61 +1,42 @@
-import React from "react"
-import gitHubIcon from "../../images/github.svg"
-import twitterIcon from "../../images/twitter.svg"
-import linkedinIcon from "../../images/linkedin.svg"
-import dribble from "../../images/dribble.svg"
-
-/** @jsx jsx */
-import { jsx } from "@emotion/core"
+import GitHubIcon from "../../icons/github.svg"
+import TwitterIcon from "../../icons/twitter.svg"
+import LinkedinIcon from "../../icons/linkedin.svg"
+import Dribble from "../../icons/dribble.svg"
 
 const SocialIcons = () => {
   return (
     <>
       <a
-        css={{
-          marginRight: 10,
-        }}
         rel={`noopener noreferrer`}
         target={`_blank`}
         href={`https://github.com/nephlin7`}
+        title="Go to my Github"
       >
-        <img title="GitHub" alt={`nephlin7`} width="30" src={gitHubIcon} />
+        <GitHubIcon />
       </a>
       <a
-        css={{
-          marginRight: 10,
-        }}
         rel={`noopener noreferrer`}
         target={`_blank`}
         href={`https://twitter.com/GeraldM_92`}
+        title="Follow me on Twitter"
       >
-        <img
-          title="Follow me on twitter"
-          alt={`@GeraldM_92`}
-          width="30"
-          src={twitterIcon}
-        />
+        <TwitterIcon />
       </a>
       <a
-        css={{
-          marginRight: 10,
-        }}
         rel={`noopener noreferrer`}
         target={`_blank`}
         href={`https://www.linkedin.com/in/gmartinez92/`}
+        title="Go to my Linkedin"
       >
-        <img
-          title="Linkedin"
-          alt={`gmartinez92`}
-          width="30"
-          src={linkedinIcon}
-        />
+        <LinkedinIcon />
       </a>
       <a
         rel={`noopener noreferrer`}
         target={`_blank`}
         href={`https://dribbble.com/geraldM`}
+        title="Go to my portfolio"
       >
-        <img title="Dribble" alt={`gmartinez92`} width="30" src={dribble} />
+        <Dribble />
       </a>
     </>
   )

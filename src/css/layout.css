@@ -143,6 +143,20 @@ button:focus {
   left: -25px;
 }
 
+.info-area a {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #537895;
+}
+
+.info-area span {
+  color: #6f6f6f;
+}
+.info-area p {
+  line-height: 27px;
+  margin-bottom: 15px;
+}
+
 @media (min-width: 993px) {
   .info-area {
     width: 50%;
@@ -161,11 +175,19 @@ button:focus {
   right: -200px;
   transform: translateY(-50%);
   box-shadow: 0 16px 48px rgba(45, 45, 45, 0.31);
-  opacity: 0;
-}
-.hero-image img {
   border-radius: 6px;
+  opacity: 0;
+  overflow: hidden;
 }
+
+.hero-image > div {
+  position: initial !important;
+}
+
+.hero-image img {
+  object-fit: cover;
+}
+
 @media (min-width: 993px) {
   .hero-image {
     opacity: 1;
@@ -198,4 +220,53 @@ button:focus {
   100% {
     opacity: 1;
   }
+}
+
+.pageWrapper {
+  max-width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.imageSide {
+  position: relative;
+  width: 40%;
+  height: 100vh;
+  text-align: center;
+  line-height: 3.5rem;
+  font-size: 2rem;
+  background: linear-gradient(to top, #09203f 0%, #537895 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mailinfo {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.mailinfo a {
+  color: #333;
+  text-decoration: none;
+}
+
+.socialIcons {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.socialIcons a {
+  margin-right: 10px;
+}
+
+.socialIcons a svg {
+  width: 35px;
+  height: 35px;
 }
