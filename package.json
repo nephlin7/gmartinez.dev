@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "author": "Gerald Martinez <g7devp@gmail.com>",
   "dependencies": {
-    "next": "latest",
+    "next": "next@latest",
     "prop-types": "^15.7.2",
     "react": "latest",
     "react-dom": "latest",
