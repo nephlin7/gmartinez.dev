@@ -14,7 +14,7 @@ const InfoArea = () => {
           href={`https://twitter.com/hashtag/JAMstack?src=hash&lang=es`}
           target={`_blank`}
         >
-          #JAMstack
+          #jamstack
         </a>
         technologies.
       </p>
