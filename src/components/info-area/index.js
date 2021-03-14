@@ -3,11 +3,11 @@ import styles from "./info-area.module.scss"
 const InfoArea = () => {
   return (
     <section className={styles.infoAreaWrapper}>
-      <span>Front-end Developer</span>
+      <span>Front-end developer</span>
       <h1 className={styles.trackingInExpand}>Gerald Martinez</h1>
       <p>
-        Front-End web developer based in Nicaragua with 4+ years of experience.
-        Currently, I'm working at <strong>Bejamas</strong> as a Front-end dev,
+        I'm a frontend developer based in Nicaragua with 4+ years of experience.
+        Currently working at <strong>Bejamas</strong> as a frontend developer,
         building great stuff with
         <a
           rel="noreferrer noopener"

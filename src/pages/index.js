@@ -7,7 +7,7 @@ const Home = () => (
   <Layout>
     <div className="pageWrapper">
       <div className="mailinfo">
-        <a href={`mailto:g7devp@gmail.com`}>Contact</a>
+        <a href={`mailto:g7devp@gmail.com`}>Get in touch</a>
       </div>
       <HeroImage />
       <InfoArea />

@@ -2,11 +2,17 @@
   position: absolute;
   bottom: 30px;
   right: 30px;
-  a {
+  display: inline-flex;
+
+  li {
     margin-right: 10px;
+  }
+
+  a {
     svg {
       width: 35px;
       height: 35px;
+      color: #09203f;
     }
   }
 }
