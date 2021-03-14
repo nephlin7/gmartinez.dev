@@ -5,15 +5,15 @@
   "version": "0.0.1",
   "author": "Gerald Martinez <g7devp@gmail.com>",
   "dependencies": {
-    "next": "next@latest",
+    "next": "^10.0.8",
     "prop-types": "^15.7.2",
-    "react": "latest",
-    "react-dom": "latest",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "sass": "^1.29.0"
   },
   "devDependencies": {
-    "babel-plugin-inline-react-svg": "^1.0.1",
-    "prettier": "^1.18.2"
+    "babel-plugin-inline-react-svg": "^2.0.1",
+    "prettier": "^2.2.1"
   },
   "keywords": [
     "Gerald Martinez, developer, front-end, react, nextjs"
