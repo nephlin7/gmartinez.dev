@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
               dataLayer.push(arguments)
             }
             gtag("js", new Date())
-            gtag("config", "${config?.gaTrackingId}", {
+            gtag("config",  `${config?.gaTrackingId}`, {
               page_path: window.location.pathname,
             })
           }}
