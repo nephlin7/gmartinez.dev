@@ -1,6 +1,7 @@
 import Head from "next/head"
 import config from "@/utils/config"
 import PropTypes from "prop-types"
+import Script from "next/script"
 
 const Layout = ({ children }) => {
   return (
@@ -30,6 +31,22 @@ const Layout = ({ children }) => {
         <meta property="twitter:description" content={config?.description} />
         <meta property="twitter:image" content={config?.seoImageUrl} />
       </Head>
+      {process.env.VERCEL_ENV === "production" && (
+        <Script
+          id="googletagmanager-js"
+          src={`https://www.googletagmanager.com/gtag/js?id=${config?.gaTrackingId}`}
+          onLoad={() => {
+            window.dataLayer = window.dataLayer || []
+            function gtag() {
+              dataLayer.push(arguments)
+            }
+            gtag("js", new Date())
+            gtag("config", "${config?.gaTrackingId}", {
+              page_path: window.location.pathname,
+            })
+          }}
+        />
+      )}
       {children}
     </main>
   )

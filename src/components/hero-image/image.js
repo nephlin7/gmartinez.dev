@@ -1,14 +1,15 @@
 import Image from "next/image"
+import devImage from '../../../public/images/ger_dev_2020.jpg'
 
 const DevImage = () => {
   return (
     <Image
       className="devImage"
-      alt="Gerald Martinez dev"
+      alt="Gerald Martinez"
       width="518"
       height="600"
-      src="/images/ger_dev_2020.jpg"
-      priority
+      src={devImage}
+      placeholder="blur"
     />
   )
 }
