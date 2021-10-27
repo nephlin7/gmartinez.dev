@@ -6,16 +6,16 @@
   "author": "Gerald Martinez <g7devp@gmail.com>",
   "dependencies": {
     "@tabler/icons": "^1.41.2",
-    "next": "^11.0.1",
+    "next": "^12.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-typed": "^1.2.0",
-    "sass": "^1.37.5"
+    "sass": "^1.43.4"
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^2.0.1",
-    "prettier": "^2.3.2"
+    "prettier": "^2.4.1"
   },
   "keywords": [
     "Gerald Martinez, developer, front-end, react, nextjs"
