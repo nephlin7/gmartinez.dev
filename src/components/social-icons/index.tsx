@@ -7,7 +7,7 @@ import {
 
 import styles from "./social-icons.module.scss"
 
-const SocialIcons = () => {
+export function SocialIcons() {
   return (
     <ul className={styles.socialIcons}>
       <li>
@@ -54,5 +54,3 @@ const SocialIcons = () => {
     </ul>
   )
 }
-
-export default SocialIcons

@@ -1,7 +1,7 @@
 import styles from "./info-area.module.scss"
 import ReactTyped from "react-typed"
 
-const InfoArea = () => {
+export function InfoArea() {
   return (
     <section className={styles.infoAreaWrapper}>
       <span>Frontend developer</span>
@@ -13,7 +13,7 @@ const InfoArea = () => {
           typeSpeed={80}
           backSpeed={20}
           strings={[
-            "I'm a frontend developer based in Nicaragua with 4+ years of experience. Currently working at <strong>Bejamas</strong> as a frontend developer,  building great stuff with #jamstack technologies.",
+            "I'm a frontend developer based in Nicaragua with 4+ years of experience. Currently working at <strong>Bejamas</strong> as a frontend developer,  building great stuff with #jamstack.",
           ]}
           smartBackspace
           shuffle={false}
@@ -30,5 +30,3 @@ const InfoArea = () => {
     </section>
   )
 }
-
-export default InfoArea

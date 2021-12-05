@@ -1,8 +1,8 @@
-import DevImage from "./image"
+import { DevImage } from "./image"
 
 import styles from "./hero-image.module.scss"
 
-const HeroImage = () => {
+export function HeroImage () {
   return (
     <section className={styles.imageSide}>
       <div className={styles.heroImage}>
@@ -11,5 +11,3 @@ const HeroImage = () => {
     </section>
   )
 }
-
-export default HeroImage
