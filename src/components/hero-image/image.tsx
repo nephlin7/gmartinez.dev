@@ -6,10 +6,9 @@ export function DevImage() {
     <Image
       className="devImage"
       alt="Gerald Martinez"
-      width="518"
-      height="600"
       src={devImage}
       placeholder="blur"
+      layout="responsive"
     />
   )
 }
