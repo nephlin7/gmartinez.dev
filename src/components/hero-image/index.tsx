@@ -1,13 +1,12 @@
 import { DevImage } from './image'
-
-import styles from './hero-image.module.scss'
+import { HeroImageWrapper, ImageSide } from './hero-image.styles'
 
 export function HeroImage() {
   return (
-    <section className={styles.imageSide}>
-      <div className={styles.heroImage}>
+    <ImageSide>
+      <HeroImageWrapper>
         <DevImage />
-      </div>
-    </section>
+      </HeroImageWrapper>
+    </ImageSide>
   )
 }
