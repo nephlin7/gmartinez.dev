@@ -25,7 +25,8 @@
         "src/utils/*"
       ]
     },
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true
   },
   "include": [
     "next-env.d.ts",

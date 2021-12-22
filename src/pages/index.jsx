@@ -1,4 +1,4 @@
-import Layout from '@/components/layout'
+import { Layout } from '@/components/layout'
 import { HeroImage } from '@/components/hero-image'
 import { SocialIcons } from '@/components/social-icons'
 import { InfoArea } from '@/components/info-area'

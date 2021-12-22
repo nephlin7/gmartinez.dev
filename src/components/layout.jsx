@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Script from 'next/script'
 import config from '@/utils/config'
 
-export default function Layout({ children }) {
+export function Layout({ children }) {
   return (
     <main>
       <Head>

@@ -7,7 +7,7 @@ import {
 
 import styles from './social-icons.module.scss'
 
-export default function SocialIcons() {
+export function SocialIcons() {
   return (
     <ul className={styles.socialIcons}>
       <li>
