@@ -1,5 +1,5 @@
-import styles from "./info-area.module.scss"
-import ReactTyped from "react-typed"
+import ReactTyped from 'react-typed'
+import styles from './info-area.module.scss'
 
 export function InfoArea() {
   return (

@@ -3,18 +3,18 @@ import {
   IconBrandTwitter,
   IconBrandGithub,
   IconBrandDribbble,
-} from "@tabler/icons"
+} from '@tabler/icons'
 
-import styles from "./social-icons.module.scss"
+import styles from './social-icons.module.scss'
 
-export function SocialIcons() {
+export default function SocialIcons() {
   return (
     <ul className={styles.socialIcons}>
       <li>
         <a
-          rel={`noopener noreferrer`}
-          target={`_blank`}
-          href={`https://github.com/nephlin7`}
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://github.com/nephlin7"
           title="Go to my Github"
         >
           <IconBrandGithub />
@@ -22,9 +22,9 @@ export function SocialIcons() {
       </li>
       <li>
         <a
-          rel={`noopener noreferrer`}
-          target={`_blank`}
-          href={`https://www.linkedin.com/in/gmartinez92/`}
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://www.linkedin.com/in/gmartinez92/"
           title="Go to my Linkedin"
         >
           <IconBrandLinkedin />
@@ -32,20 +32,20 @@ export function SocialIcons() {
       </li>
       <li>
         <a
-          rel={`noopener noreferrer`}
-          target={`_blank`}
-          href={`https://dribbble.com/geraldM`}
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://dribbble.com/geraldM"
           title="Go to my portfolio"
         >
           <IconBrandDribbble />
         </a>
       </li>
       <li>
-        {" "}
+        {' '}
         <a
-          rel={`noopener noreferrer`}
-          target={`_blank`}
-          href={`https://twitter.com/GeraldM_92`}
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://twitter.com/GeraldM_92"
           title="Follow me on Twitter"
         >
           <IconBrandTwitter />

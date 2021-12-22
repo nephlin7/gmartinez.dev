@@ -90,13 +90,13 @@ html {
   justify-content: space-between;
 }
 
-.mailinfo {
+.mailWrapper {
   position: absolute;
   top: 30px;
   right: 30px;
 }
 
-.mailinfo a {
+.mailWrapper a {
   color: #333;
   text-decoration: none;
 }

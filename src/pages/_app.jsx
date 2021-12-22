@@ -1,4 +1,4 @@
-import "../css/layout.css"
+import '../css/layout.css'
 
 const App = ({ Component, pageProps }) => {
   return <Component {...pageProps} />

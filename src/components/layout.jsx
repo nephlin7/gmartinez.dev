@@ -1,17 +1,14 @@
-import Head from "next/head"
-import config from "@/utils/config"
-import PropTypes from "prop-types"
-import Script from "next/script"
+/* eslint-disable no-undef */
+import Head from 'next/head'
+import Script from 'next/script'
+import config from '@/utils/config'
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
   return (
     <main>
       <Head>
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta name="msapplication-TileColor" content="#4c708a" />
         <meta name="theme-color" content="#4c708a" />
@@ -31,17 +28,17 @@ const Layout = ({ children }) => {
         <meta property="twitter:description" content={config?.description} />
         <meta property="twitter:image" content={config?.seoImageUrl} />
       </Head>
-      {process.env.VERCEL_ENV === "production" && (
+      {process.env.VERCEL_ENV === 'production' && (
         <Script
           id="googletagmanager-js"
           src={`https://www.googletagmanager.com/gtag/js?id=${config?.gaTrackingId}`}
           onLoad={() => {
-            window.dataLayer = window.dataLayer || []
-            function gtag() {
-              dataLayer.push(arguments)
+            const dataLayer = window.dataLayer || []
+            function gtag(...args) {
+              dataLayer.push(args)
             }
-            gtag("js", new Date())
-            gtag("config", `${config?.gaTrackingId}`, {
+            gtag('js', new Date())
+            gtag('config', `${config?.gaTrackingId}`, {
               page_path: window.location.pathname,
             })
           }}
@@ -51,8 +48,3 @@ const Layout = ({ children }) => {
     </main>
   )
 }
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout

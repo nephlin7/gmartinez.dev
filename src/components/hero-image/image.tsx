@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from 'next/image'
 import devImage from '../../../public/images/ger_dev_2020.jpg'
 
 export function DevImage() {
