@@ -7,6 +7,11 @@
     margin-bottom: 15px;
   }
 
+  h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
   a {
     margin-left: 10px;
     margin-right: 10px;
@@ -17,20 +22,27 @@
     color: #6f6f6f;
   }
 
-  :global(.description) {
-    span {
-      line-height: 27px;
-      margin-bottom: 15px;
-      color: #000;
-    }
-  }
-
   @media (min-width: 993px) {
     width: 50%;
     left: 100px;
 
     p {
       max-width: 80%;
+    }
+  }
+}
+
+.text {
+  line-height: 27px;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.blogEntries {
+  li {
+    margin-bottom: 10px;
+    a {
+      text-decoration: none;
     }
   }
 }

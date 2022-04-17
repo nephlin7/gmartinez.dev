@@ -28,7 +28,7 @@ export function Layout({ children }) {
         <meta property="twitter:description" content={config?.description} />
         <meta property="twitter:image" content={config?.seoImageUrl} />
       </Head>
-      {process.env.VERCEL_ENV === 'production' && (
+      {process.env.NEXT_PUBLIC_ANALYTICS_ENV === 'production' && (
         <Script
           id="googletagmanager-js"
           src={`https://www.googletagmanager.com/gtag/js?id=${config?.gaTrackingId}`}
