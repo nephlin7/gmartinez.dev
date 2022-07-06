@@ -7,9 +7,6 @@ export default function Home() {
   return (
     <Layout>
       <div className="pageWrapper">
-        <div className="mailWrapper">
-          <a href="mailto:g7devp@gmail.com">Get in touch</a>
-        </div>
         <HeroImage />
         <InfoArea />
         <SocialIcons />
