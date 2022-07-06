@@ -6,10 +6,10 @@
   "author": "Gerald Martinez <g7devp@gmail.com>",
   "dependencies": {
     "@tabler/icons": "^1.64.0",
-    "next": "^12.1.5",
+    "next": "latest",
     "prop-types": "^15.8.1",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "latest",
+    "react-dom": "latest",
     "sass": "^1.50.0"
   },
   "devDependencies": {
