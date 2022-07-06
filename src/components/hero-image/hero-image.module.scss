@@ -5,9 +5,7 @@
   text-align: center;
   line-height: 3.5rem;
   font-size: 2rem;
-  background: #0f2027;
-  background: -webkit-linear-gradient(to bottom, #2c5364, #203a43, #0f2027);
-  background: linear-gradient(to bottom, #2c5364, #203a43, #0f2027);
+  background: #151718;
   color: white;
   display: flex;
   align-items: center;
@@ -17,7 +15,7 @@
 
 .heroImage {
   position: absolute;
-  width: 90%;
+  width: 94%;
   top: 50%;
   right: -200px;
   transform: translateY(-50%);
@@ -25,6 +23,7 @@
   border-radius: 6px;
   opacity: 0;
   overflow: hidden;
+  max-width: 920px;
   & > span {
     position: initial !important;
   }
