@@ -14,10 +14,10 @@ const query = `//groq
 }
 `
 
-export default function Home({ siteSettingsData, preview }) {
+export default function Home({ frontPageData, preview }) {
   const router = useRouter()
   const { data: frontPage } = usePreviewSubscription(query, {
-    initialData: siteSettingsData,
+    initialData: frontPageData,
     enabled: preview || router.query.preview !== null,
   })
 
