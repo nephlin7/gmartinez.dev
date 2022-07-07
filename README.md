@@ -18,6 +18,8 @@ Made with Nextjs & Sanity, hosted on Vercel
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
 
+## Setup
+
 ### Develop
 
 To develop all apps and packages, run the following command:
