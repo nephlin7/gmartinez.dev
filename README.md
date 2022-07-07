@@ -25,7 +25,6 @@ Made with Nextjs & Sanity, hosted on Vercel
 To develop all apps and packages, run the following command:
 
 ```
-cd my-turborepo
 yarn run dev
 ```
 
@@ -34,6 +33,5 @@ yarn run dev
 To build all apps and packages, run the following command:
 
 ```
-cd my-turborepo
 yarn run build
 ```
