@@ -18,9 +18,14 @@ Made with Nextjs & Sanity, hosted on Vercel
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
 
-## Setup
+### Develop
 
-This repository is used in the `npx create-turbo` command, and selected when choosing which package manager you wish to use with your monorepo (Yarn).
+To develop all apps and packages, run the following command:
+
+```
+cd my-turborepo
+yarn run dev
+```
 
 ### Build
 
@@ -29,13 +34,4 @@ To build all apps and packages, run the following command:
 ```
 cd my-turborepo
 yarn run build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-yarn run dev
 ```
