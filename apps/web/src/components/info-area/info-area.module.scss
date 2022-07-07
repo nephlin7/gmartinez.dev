@@ -32,10 +32,12 @@
   }
 }
 
-.text {
-  line-height: 27px;
-  margin-bottom: 15px;
-  color: #000;
+.portableText {
+  p {
+    line-height: 27px;
+    margin-bottom: 15px;
+    color: #000;
+  }
 }
 
 .blogEntries {

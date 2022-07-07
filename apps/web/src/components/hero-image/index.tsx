@@ -1,12 +1,15 @@
-import { DevImage } from './image'
-
+import { urlFor } from '@/utils/sanity'
 import styles from './hero-image.module.scss'
 
-export function HeroImage() {
+interface Props {
+  image: string
+}
+
+export function HeroImage({ image }: Props) {
   return (
     <section className={styles.imageSide}>
       <div className={styles.heroImage}>
-        <DevImage />
+        <img className="devImage" alt="Gerald Martinez" src={urlFor(image).url()} />
       </div>
     </section>
   )

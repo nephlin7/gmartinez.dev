@@ -24,12 +24,15 @@
   opacity: 0;
   overflow: hidden;
   max-width: 920px;
+  line-height: 0;
+
   & > span {
     position: initial !important;
   }
 
   & img {
     object-fit: cover;
+    width: 100%;
   }
 
   @media (min-width: 993px) {

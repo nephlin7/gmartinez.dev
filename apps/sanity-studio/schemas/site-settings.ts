@@ -38,6 +38,21 @@ export default {
           },
         ],
       },
+      {
+        title: "Footer social media items",
+        name: "footerSocialMedia",
+        type: "array",
+        validation: (Rule) => [
+          Rule.max(10).warning("Are you sure you want more than 10 items?"),
+          Rule.unique().error("You have duplicate menu items"),
+        ],
+        of: [
+          {
+            type: "reference",
+            to: [{ type: "socialMedia" }],
+          },
+        ],
+      },
     ],
   };
   

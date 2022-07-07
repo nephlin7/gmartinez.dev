@@ -1,6 +1,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['assets.vercel.com'],
+    domains: ['assets.vercel.com', 'cdn.sanity.io'],
   },
 }
