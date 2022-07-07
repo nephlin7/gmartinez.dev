@@ -1,52 +1,26 @@
 {
-  "name": "gmartinez-dev",
+  "name": "my-turborepo",
+  "version": "0.0.0",
   "private": true,
-  "description": "Gerald Martinez personal website",
-  "version": "0.0.1",
-  "author": "Gerald Martinez <g7devp@gmail.com>",
-  "dependencies": {
-    "@tabler/icons": "^1.64.0",
-    "next": "latest",
-    "prop-types": "^15.8.1",
-    "react": "latest",
-    "react-dom": "latest",
-    "sass": "^1.50.0"
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@types/node": "^17.0.24",
-    "@types/react": "^18.0.5",
-    "@types/react-dom": "^18.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.19.0",
-    "@typescript-eslint/parser": "^5.19.0",
-    "eslint": "^8.13.0",
-    "eslint-config-airbnb": "19.0.4",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.4.0",
-    "prettier": "^2.6.2",
-    "typescript": "^4.6.3"
+    "eslint-config-custom": "*",
+    "prettier": "latest",
+    "turbo": "latest"
   },
-  "keywords": [
-    "Gerald Martinez, developer, front-end, react, nextjs"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "eslint-check": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "eslint-fix": "eslint --fix . --ext .js,.jsx,.ts,.tsx",
-    "type-check": "tsc"
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nephlin7/gmartinez.dev"
-  },
-  "bugs": {
-    "url": "https://github.com/nephlin7/gmartinez.dev/issues"
-  }
+  "dependencies": {},
+  "packageManager": "yarn@1.22.10"
 }

@@ -15,11 +15,12 @@
   a {
     margin-left: 10px;
     margin-right: 10px;
-    color: #4c708a;
+    color: #09203f;
   }
 
   span {
-    color: #6f6f6f;
+    color: #4689af;
+    background-color: #e9f0fe;
   }
 
   @media (min-width: 993px) {
@@ -32,10 +33,12 @@
   }
 }
 
-.text {
-  line-height: 27px;
-  margin-bottom: 15px;
-  color: #000;
+.portableText {
+  p {
+    line-height: 27px;
+    margin-bottom: 15px;
+    color: #000;
+  }
 }
 
 .blogEntries {

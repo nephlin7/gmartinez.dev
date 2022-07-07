@@ -1,0 +1,48 @@
+{
+  "name": "gmartinez-dev",
+  "private": true,
+  "description": "Gerald Martinez personal website",
+  "version": "0.0.1",
+  "author": "Gerald Martinez <g7devp@gmail.com>",
+  "dependencies": {
+    "@portabletext/react": "^1.0.6",
+    "@sanity/image-url": "^1.0.1",
+    "@tabler/icons": "^1.64.0",
+    "next": "latest",
+    "next-sanity": "^0.6.0",
+    "prop-types": "^15.8.1",
+    "react": "latest",
+    "react-dom": "latest",
+    "sass": "^1.50.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.24",
+    "@types/react": "^18.0.5",
+    "@types/react-dom": "^18.0.1",
+    "eslint": "^8.13.0",
+    "eslint-config-custom": "*",
+    "next-transpile-modules": "9.0.0",
+    "prettier": "^2.6.2",
+    "tsconfig": "*",
+    "typescript": "^4.6.3"
+  },
+  "keywords": [
+    "Gerald Martinez, developer, front-end, react, nextjs"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev --port 3000",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "lint": "eslint src --fix",
+    "type-check": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nephlin7/gmartinez.dev"
+  },
+  "bugs": {
+    "url": "https://github.com/nephlin7/gmartinez.dev/issues"
+  }
+}
