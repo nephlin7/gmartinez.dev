@@ -1,7 +1,8 @@
 /* eslint-disable no-undef */
-import Head from 'next/head'
-import Script from 'next/script'
-import config from '@/utils/config'
+import Head from 'next/head';
+import Script from 'next/script';
+
+import config from '@/utils/config';
 
 export function Layout({ children }) {
   return (
@@ -33,18 +34,18 @@ export function Layout({ children }) {
           id="googletagmanager-js"
           src={`https://www.googletagmanager.com/gtag/js?id=${config?.gaTrackingId}`}
           onLoad={() => {
-            const dataLayer = window.dataLayer || []
+            const dataLayer = window.dataLayer || [];
             function gtag(...args) {
-              dataLayer.push(args)
+              dataLayer.push(args);
             }
-            gtag('js', new Date())
+            gtag('js', new Date());
             gtag('config', `${config?.gaTrackingId}`, {
               page_path: window.location.pathname,
-            })
+            });
           }}
         />
       )}
       {children}
     </main>
-  )
+  );
 }
