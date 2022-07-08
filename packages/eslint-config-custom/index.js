@@ -1,49 +1,47 @@
 module.exports = {
   extends: [
-    'airbnb-base',
+    'next',
+    'prettier',
     'plugin:@typescript-eslint/recommended',
     'plugin:import/typescript',
-    'plugin:prettier/recommended',
   ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'import', 'prettier'],
   rules: {
     'prettier/prettier': [
       'error',
       {
-        printWidth: 100,
-        singleQuote: true,
         trailingComma: 'all',
-        arrowParens: 'always',
+        singleQuote: true,
+        tabWidth: 2,
+        semi: true,
+        printWidth: 120,
       },
     ],
-    'import/no-unresolved': 'off',
-    'import/first': 'error',
+    '@next/next/no-html-link-for-pages': 'off',
+    'react/jsx-key': 'off',
     'import/no-duplicates': 'error',
-    'import/extensions': ['error', 'never', { ignorePackages: true }],
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', ['sibling', 'parent'], 'index', 'internal', 'object'],
+        pathGroups: [
+          {
+            pattern: '@/**',
+            group: 'internal',
+          },
+        ],
+        pathGroupsExcludedImportTypes: ['builtin', 'object'],
+        'newlines-between': 'always',
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+      },
+    ],
+    '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '^_' }],
+    'no-duplicate-imports': 'off',
+    '@typescript-eslint/no-duplicate-imports': ['error', { includeExports: true }],
+    '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
+    '@typescript-eslint/prefer-optional-chain': ['warn'],
   },
-  overrides: [
-    {
-      files: ['*.ts', '*.tsx', '*.jsx'],
-      rules: {
-        'import/prefer-default-export': 'off',
-        'class-methods-use-this': 'off',
-        '@typescript-eslint/no-unused-vars': 'off',
-        'import/no-duplicates': 'off',
-        'no-redeclare': 'off',
-        'import/no-unresolved': 'off',
-        'import/named': 'off',
-        'import/namespace': 'off',
-        'import/export': 'off',
-        'no-undef': 'off',
-        'import/no-extraneous-dependencies': 'off',
-      },
-    },
-    {
-      files: ['*.js'],
-      rules: {
-        '@typescript-eslint/no-var-requires': 'off',
-      },
-    },
-  ],
 };

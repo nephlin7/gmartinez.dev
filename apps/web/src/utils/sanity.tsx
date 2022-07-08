@@ -1,13 +1,14 @@
-import { createClient, createPreviewSubscriptionHook } from 'next-sanity'
-import { PortableText as PortableTextComponent, PortableTextProps } from '@portabletext/react'
-import createImageUrlBuilder from '@sanity/image-url'
-import { SanityImageSource } from '@sanity/image-url/lib/types/types'
-import {
+import type { PortableTextProps } from '@portabletext/react';
+import { PortableText as PortableTextComponent } from '@portabletext/react';
+import type {
   PortableTextBlock,
   PortableTextMarkDefinition,
   ArbitraryTypedObject,
   PortableTextSpan,
-} from '@portabletext/types'
+} from '@portabletext/types';
+import createImageUrlBuilder from '@sanity/image-url';
+import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
+import { createClient, createPreviewSubscriptionHook } from 'next-sanity';
 
 const config = {
   /**
@@ -25,48 +26,43 @@ const config = {
    * data always (potentially slightly slower and a bit more expensive).
    * Authenticated request (like preview) will always bypass the CDN
    * */
-}
+};
 
 if (!config.projectId) {
-  throw Error('The Project ID is not set. Check your environment variables.')
+  throw Error('The Project ID is not set. Check your environment variables.');
 }
 if (!config.dataset) {
-  throw Error('The dataset name is not set. Check your environment variables.')
+  throw Error('The dataset name is not set. Check your environment variables.');
 }
 
 /**
  * Set up a helper function for generating Image URLs with only the asset reference data in your documents.
  * Read more: https://www.sanity.io/docs/image-url
  * */
-const sanityImageBuilder = createImageUrlBuilder(config)
+const sanityImageBuilder = createImageUrlBuilder(config);
 
-export const urlFor = (source: SanityImageSource) => sanityImageBuilder.image(source)
+export const urlFor = (source: SanityImageSource) => sanityImageBuilder.image(source);
 
 // Set up the live preview subsscription hook
-export const usePreviewSubscription = createPreviewSubscriptionHook(config)
+export const usePreviewSubscription = createPreviewSubscriptionHook(config);
 
 // Set up Portable Text serialization
 export const PortableText = (
   props: JSX.IntrinsicAttributes &
     PortableTextProps<
-      PortableTextBlock<
-        PortableTextMarkDefinition,
-        ArbitraryTypedObject | PortableTextSpan,
-        string,
-        string
-      >
+      PortableTextBlock<PortableTextMarkDefinition, ArbitraryTypedObject | PortableTextSpan, string, string>
     >,
 ) => {
-  return <PortableTextComponent components={{}} {...props} />
-}
+  return <PortableTextComponent components={{}} {...props} />;
+};
 // Set up the client for fetching data in the getProps page functions
-export const sanityClient = createClient(config)
+export const sanityClient = createClient(config);
 // Set up a preview client with serverless authentication for drafts
 
 export const previewClient = createClient({
   ...config,
   useCdn: false,
-})
+});
 
 // Helper function for easily switching between normal client and preview client
-export const getClient = (usePreview: boolean) => (usePreview ? previewClient : sanityClient)
+export const getClient = (usePreview: boolean) => (usePreview ? previewClient : sanityClient);

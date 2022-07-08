@@ -1,8 +1,9 @@
-import { urlFor } from '@/utils/sanity'
-import styles from './hero-image.module.scss'
+import styles from './hero-image.module.scss';
+
+import { urlFor } from '@/utils/sanity';
 
 interface Props {
-  image: string
+  image: string;
 }
 
 export function HeroImage({ image }: Props) {
@@ -12,5 +13,5 @@ export function HeroImage({ image }: Props) {
         <img className="devImage" alt="Gerald Martinez" src={urlFor(image).url()} />
       </div>
     </section>
-  )
+  );
 }

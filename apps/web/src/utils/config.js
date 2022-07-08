@@ -5,4 +5,4 @@ export default {
   seoImageUrl: `images/default-seo.png`,
   siteUrl: `https://gmartinez.dev/`,
   gaTrackingId: 'UA-137038166-1',
-}
+};

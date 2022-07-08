@@ -1,17 +1,18 @@
-import { PortableText } from '@/utils/sanity'
-import styles from './info-area.module.scss'
+import styles from './info-area.module.scss';
+
+import { PortableText } from '@/utils/sanity';
 
 interface Posts {
-  title: string
-  url: string
-  emoji: string
+  title: string;
+  url: string;
+  emoji: string;
 }
 
 interface Props {
-  heading: string
-  subHeading: string
-  excerpt: []
-  posts?: Posts[]
+  heading: string;
+  subHeading: string;
+  excerpt: [];
+  posts?: Posts[];
 }
 
 export function InfoArea({ heading, subHeading, excerpt, posts = [] }: Props) {
@@ -32,5 +33,5 @@ export function InfoArea({ heading, subHeading, excerpt, posts = [] }: Props) {
         ))}
       </ul>
     </section>
-  )
+  );
 }
