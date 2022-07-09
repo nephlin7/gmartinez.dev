@@ -3,9 +3,10 @@ import { useRouter } from 'next/router';
 import { getClient, usePreviewSubscription } from '../utils/sanity';
 
 import { HeroImage } from '@/components/hero-image';
-import { InfoArea } from '@/components/info-area';
 import { Layout } from '@/components/layout';
+import { Profile } from '@/components/profile';
 import { SocialIcons } from '@/components/social-icons';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 const query = `//groq
 *[_id == "frontPage"][0]{
@@ -26,8 +27,9 @@ export default function Home({ frontPageData, preview }) {
       <div className="pageWrapper">
         {frontPage && (
           <>
+            <ThemeToggle />
             <HeroImage image={frontPage.mainImage} />
-            <InfoArea
+            <Profile
               heading={frontPage.heading}
               subHeading={frontPage.subHeading}
               excerpt={frontPage.excerpt}
@@ -35,7 +37,6 @@ export default function Home({ frontPageData, preview }) {
             />
           </>
         )}
-
         <SocialIcons />
       </div>
     </Layout>

@@ -1,4 +1,4 @@
-import styles from './hero-image.module.scss';
+import { ImageSide, HeroImageWrapper } from './hero-image.styles';
 
 import { urlFor } from '@/utils/sanity';
 
@@ -8,11 +8,11 @@ interface Props {
 
 export function HeroImage({ image }: Props) {
   return (
-    <section className={styles.imageSide}>
-      <div className={styles.heroImage}>
+    <ImageSide>
+      <HeroImageWrapper>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className="devImage" alt="Gerald Martinez" src={urlFor(image).url()} />
-      </div>
-    </section>
+      </HeroImageWrapper>
+    </ImageSide>
   );
 }

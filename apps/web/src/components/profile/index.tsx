@@ -1,4 +1,4 @@
-import styles from './info-area.module.scss';
+import { ProfileWrapper, PortableTextWrapper, BlogList } from './profile.styles';
 
 import { PortableText } from '@/utils/sanity';
 
@@ -15,15 +15,15 @@ interface Props {
   posts?: Posts[];
 }
 
-export function InfoArea({ heading, subHeading, excerpt, posts = [] }: Props) {
+export function Profile({ heading, subHeading, excerpt, posts = [] }: Props) {
   return (
-    <section className={styles.infoAreaWrapper}>
+    <ProfileWrapper>
       <span>{subHeading}</span>
-      <h1 className={styles.trackingInExpand}>{heading}</h1>
-      {excerpt && <div className={styles.portableText}>{<PortableText value={excerpt} />}</div>}
+      <h1>{heading}</h1>
+      {excerpt && <PortableTextWrapper>{<PortableText value={excerpt} />}</PortableTextWrapper>}
 
       <br />
-      <ul className={styles.blogEntries}>
+      <BlogList>
         {posts.map((item) => (
           <li key={item.url}>
             <a href={item.url} rel="noreferrer noopener" target="_blank">
@@ -31,7 +31,7 @@ export function InfoArea({ heading, subHeading, excerpt, posts = [] }: Props) {
             </a>
           </li>
         ))}
-      </ul>
-    </section>
+      </BlogList>
+    </ProfileWrapper>
   );
 }
