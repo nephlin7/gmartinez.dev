@@ -1,10 +1,10 @@
 import { IconBrandLinkedin, IconBrandTwitter, IconBrandGithub, IconBrandDribbble } from '@tabler/icons';
 
-import styles from './social-icons.module.scss';
+import { SocialIconsWrapper } from './social-icons.styles';
 
 export function SocialIcons() {
   return (
-    <ul className={styles.socialIcons}>
+    <SocialIconsWrapper>
       <li>
         <a rel="noopener noreferrer" target="_blank" href="https://github.com/nephlin7" title="Go to my Github">
           <IconBrandGithub />
@@ -31,6 +31,6 @@ export function SocialIcons() {
           <IconBrandTwitter />
         </a>
       </li>
-    </ul>
+    </SocialIconsWrapper>
   );
 }

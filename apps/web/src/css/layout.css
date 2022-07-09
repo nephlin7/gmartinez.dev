@@ -24,6 +24,7 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 h1,
 h2,
 h3,
@@ -78,7 +79,6 @@ body,
 html {
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
-  background: #f4f4f4;
 }
 
 .pageWrapper {

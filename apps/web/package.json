@@ -6,10 +6,13 @@
   "author": "Gerald Martinez <g7devp@gmail.com>",
   "dependencies": {
     "@portabletext/react": "^1.0.6",
+    "@radix-ui/colors": "^0.1.8",
     "@sanity/image-url": "^1.0.1",
+    "@stitches/react": "^1.2.8",
     "@tabler/icons": "^1.64.0",
     "next": "latest",
     "next-sanity": "^0.6.0",
+    "next-themes": "^0.2.0",
     "prop-types": "^15.8.1",
     "react": "latest",
     "react-dom": "latest",
