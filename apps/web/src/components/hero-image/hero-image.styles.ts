@@ -1,4 +1,4 @@
-import { styled } from '../../stitches.config';
+import { styled } from '@/utils/stitches.config';
 
 export const ImageSide = styled('section', {
   alignItems: 'center',
@@ -21,7 +21,7 @@ export const HeroImageWrapper = styled('div', {
   top: '50%',
   right: '-200px',
   transform: 'translateY(-50%)',
-  boxShadow: '0 16px 48px rgba(45, 45, 45, 0.31)',
+  boxShadow: '$default',
   borderRadius: '6px',
   overflow: 'hidden',
   maxWidth: '920px',

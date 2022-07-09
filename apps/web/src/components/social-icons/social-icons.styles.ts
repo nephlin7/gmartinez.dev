@@ -1,4 +1,4 @@
-import { styled } from '../../stitches.config';
+import { styled } from '@/utils/stitches.config';
 
 export const SocialIconsWrapper = styled('ul', {
   position: 'absolute',

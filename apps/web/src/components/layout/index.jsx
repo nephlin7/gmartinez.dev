@@ -2,11 +2,13 @@
 import Head from 'next/head';
 import Script from 'next/script';
 
+import { PageWrapper } from './layout.styles';
+
 import config from '@/utils/config';
 
 export function Layout({ children }) {
   return (
-    <main>
+    <PageWrapper>
       <Head>
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -46,6 +48,6 @@ export function Layout({ children }) {
         />
       )}
       {children}
-    </main>
+    </PageWrapper>
   );
 }

@@ -2,14 +2,17 @@ import { gray, violet, violetDark, slate, slateDark, grayDark } from '@radix-ui/
 import type * as Stitches from '@stitches/react';
 import { createStitches } from '@stitches/react';
 
-export const { styled, css, globalCss, keyframes, getCssText, theme, createTheme, config, reset } = createStitches({
+export const { styled, css, globalCss, getCssText, theme, createTheme, config } = createStitches({
   theme: {
     colors: {
       ...gray,
       ...violet,
       ...slate,
 
-      figureBg: gray.gray12,
+      figureBg: slate.slate12,
+    },
+    shadows: {
+      default: `0 25px 50px -12px ${slateDark.slate4}`,
     },
   },
 });
@@ -22,14 +25,16 @@ export const darkTheme = createTheme({
     ...violetDark,
     ...slateDark,
 
-    figureBg: gray.gray12,
+    figureBg: slate.slate12,
+  },
+  shadows: {
+    default: `0 25px 50px -12px ${slateDark.slate1}`,
   },
 });
 
 const GlobalStyles = globalCss({
   body: {
-    background: '$gray1',
-    color: '$text',
+    background: '$slate1',
   },
 });
 

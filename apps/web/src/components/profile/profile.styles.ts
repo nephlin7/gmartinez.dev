@@ -1,4 +1,4 @@
-import { styled } from '../../stitches.config';
+import { styled } from '@/utils/stitches.config';
 
 export const ProfileWrapper = styled('section', {
   position: 'relative',
@@ -19,7 +19,7 @@ export const ProfileWrapper = styled('section', {
 
   span: {
     color: '$violet11',
-    backgroundColor: '$violet4',
+    backgroundColor: '$violet3',
   },
 
   '@media (min-width: 993px)': {

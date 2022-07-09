@@ -1,7 +1,7 @@
-import '../css/layout.css';
+import '../css/reset.css';
 import { ThemeProvider } from 'next-themes';
 
-import { darkTheme } from '../stitches.config';
+import { darkTheme } from '@/utils/stitches.config';
 
 const App = ({ Component, pageProps }) => {
   return (

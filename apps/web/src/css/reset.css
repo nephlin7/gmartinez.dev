@@ -81,22 +81,3 @@ html {
     "Liberation Mono", Menlo, Courier, monospace;
 }
 
-.pageWrapper {
-  max-width: 100%;
-  max-height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.mailWrapper {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-}
-
-.mailWrapper a {
-  color: #333;
-  text-decoration: none;
-}

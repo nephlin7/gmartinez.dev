@@ -1,15 +1,25 @@
 import { IconMoon, IconSun } from '@tabler/icons';
 import { useTheme } from 'next-themes';
+import { useState, useEffect } from 'react';
 
-import { styled } from '../stitches.config';
+import { styled } from '@/utils/stitches.config';
 
 export function ThemeToggle() {
+  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-  const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
+  const handleToggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <ToggleBox>
-      <ThemeToggleButton onClick={toggleTheme}>{theme === 'dark' ? <IconSun /> : <IconMoon />}</ThemeToggleButton>
+      <ThemeToggleButton onClick={handleToggleTheme}>{theme === 'dark' ? <IconSun /> : <IconMoon />}</ThemeToggleButton>
     </ToggleBox>
   );
 }

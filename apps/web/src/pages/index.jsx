@@ -24,21 +24,19 @@ export default function Home({ frontPageData, preview }) {
 
   return (
     <Layout>
-      <div className="pageWrapper">
-        {frontPage && (
-          <>
-            <ThemeToggle />
-            <HeroImage image={frontPage.mainImage} />
-            <Profile
-              heading={frontPage.heading}
-              subHeading={frontPage.subHeading}
-              excerpt={frontPage.excerpt}
-              posts={frontPage.externalPosts}
-            />
-          </>
-        )}
-        <SocialIcons />
-      </div>
+      {frontPage && (
+        <>
+          <ThemeToggle />
+          <HeroImage image={frontPage.mainImage} />
+          <Profile
+            heading={frontPage.heading}
+            subHeading={frontPage.subHeading}
+            excerpt={frontPage.excerpt}
+            posts={frontPage.externalPosts}
+          />
+        </>
+      )}
+      <SocialIcons />
     </Layout>
   );
 }
