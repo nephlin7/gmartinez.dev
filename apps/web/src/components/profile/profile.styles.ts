@@ -2,7 +2,8 @@ import { styled } from '@/utils/stitches.config';
 
 export const ProfileWrapper = styled('section', {
   position: 'relative',
-  left: '-25px',
+  left: 0,
+  paddingLeft: '20px',
 
   h1: {
     fontSize: '50px',
@@ -25,6 +26,7 @@ export const ProfileWrapper = styled('section', {
   '@media (min-width: 993px)': {
     width: '50%',
     left: '100px',
+    paddingLeft: 0,
 
     p: {
       maxWidth: '80%',
