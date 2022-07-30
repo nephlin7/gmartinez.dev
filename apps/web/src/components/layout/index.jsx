@@ -32,21 +32,21 @@ export function Layout({ children }) {
         <meta property="twitter:image" content={config?.seoImageUrl} />
       </Head>
       {process.env.NEXT_PUBLIC_ANALYTICS_ENV === 'production' && (
-        <Script
-          id="googletagmanager-js"
-          strategy="lazyOnload"
-          src={`https://www.googletagmanager.com/gtag/js?id=${config?.gaTrackingId}`}
-          onLoad={() => {
-            const dataLayer = window.dataLayer || [];
-            function gtag(...args) {
-              dataLayer.push(args);
-            }
-            gtag('js', new Date());
-            gtag('config', `${config?.gaTrackingId}`, {
-              page_path: window.location.pathname,
-            });
-          }}
-        />
+        <>
+          <Script
+            id="googletagmanager-js"
+            strategy="lazyOnload"
+            src={`https://www.googletagmanager.com/gtag/js?id=${config?.gaTrackingId}`}
+          />
+          <Script id="gtag" strategy="lazyOnload">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${config.gaTrackingId}');
+          `}
+          </Script>
+        </>
       )}
       {children}
     </PageWrapper>
