@@ -34,6 +34,7 @@ export function Layout({ children }) {
       {process.env.NEXT_PUBLIC_ANALYTICS_ENV === 'production' && (
         <Script
           id="googletagmanager-js"
+          strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=${config?.gaTrackingId}`}
           onLoad={() => {
             const dataLayer = window.dataLayer || [];
