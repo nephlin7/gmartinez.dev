@@ -11,7 +11,7 @@ export function HeroImage({ image }: Props) {
     <ImageSide>
       <HeroImageWrapper>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="devImage" alt="Gerald Martinez" src={urlFor(image).url()} />
+        <img className="devImage" alt="Gerald Martinez" src={urlFor(image).url()} loading="eager" />
       </HeroImageWrapper>
     </ImageSide>
   );

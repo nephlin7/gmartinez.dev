@@ -1,6 +1,5 @@
 /* eslint-disable no-undef */
 import Head from 'next/head';
-import Script from 'next/script';
 
 import { PageWrapper } from './layout.styles';
 
@@ -31,23 +30,7 @@ export function Layout({ children }) {
         <meta property="twitter:description" content={config?.description} />
         <meta property="twitter:image" content={config?.seoImageUrl} />
       </Head>
-      {process.env.NEXT_PUBLIC_ANALYTICS_ENV === 'production' && (
-        <>
-          <Script
-            id="googletagmanager-js"
-            strategy="lazyOnload"
-            src={`https://www.googletagmanager.com/gtag/js?id=${config?.gaTrackingId}`}
-          />
-          <Script id="gtag" strategy="lazyOnload">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${config.gaTrackingId}');
-          `}
-          </Script>
-        </>
-      )}
+
       {children}
     </PageWrapper>
   );

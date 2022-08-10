@@ -26,7 +26,7 @@ export const HeroImageWrapper = styled('div', {
   overflow: 'hidden',
   maxWidth: '920px',
   lineHeight: '0',
-  opacity: 0,
+  display: 'none',
 
   img: {
     objectFit: 'cover',
@@ -34,6 +34,6 @@ export const HeroImageWrapper = styled('div', {
   },
 
   '@media (min-width: 993px)': {
-    opacity: 1,
+    display: 'block',
   },
 });
