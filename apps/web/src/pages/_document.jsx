@@ -2,6 +2,7 @@ import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 import Script from 'next/script';
 import React from 'react';
 
+import config from '@/utils/config';
 import { getCssText } from '@/utils/stitches.config';
 
 export default class Document extends NextDocument {
