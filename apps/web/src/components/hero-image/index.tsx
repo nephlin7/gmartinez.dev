@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { ImageSide, HeroImageWrapper } from './hero-image.styles';
 
 import { urlFor } from '@/utils/sanity';
@@ -10,8 +12,7 @@ export function HeroImage({ image }: Props) {
   return (
     <ImageSide>
       <HeroImageWrapper>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="devImage" alt="Gerald Martinez" src={urlFor(image).url()} loading="eager" />
+        <Image className="devImage" alt="Gerald Martinez" src={urlFor(image).url()} width={518} height={591} priority />
       </HeroImageWrapper>
     </ImageSide>
   );
