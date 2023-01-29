@@ -8,7 +8,7 @@ import type {
 } from '@portabletext/types';
 import createImageUrlBuilder from '@sanity/image-url';
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
-import { createClient, createPreviewSubscriptionHook } from 'next-sanity';
+import { createClient } from 'next-sanity';
 
 const config = {
   /**
@@ -43,9 +43,6 @@ if (!config.dataset) {
 const sanityImageBuilder = createImageUrlBuilder(config);
 
 export const urlFor = (source: SanityImageSource) => sanityImageBuilder.image(source);
-
-// Set up the live preview subsscription hook
-export const usePreviewSubscription = createPreviewSubscriptionHook(config);
 
 // Set up Portable Text serialization
 export const PortableText = (

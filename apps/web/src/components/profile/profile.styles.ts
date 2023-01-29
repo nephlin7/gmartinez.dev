@@ -6,14 +6,15 @@ export const ProfileWrapper = styled('section', {
   paddingLeft: '20px',
 
   h1: {
-    fontSize: '50px',
-    marginTop: '10px',
+    fontSize: '60px',
     marginBottom: '15px',
     color: '$slate12',
+    fontWeight: '600',
+    marginTop: 4,
   },
 
   p: {
-    lineHeight: '27px',
+    lineHeight: '1.7',
     marginBottom: '15px',
     color: '$slate11',
   },
@@ -21,6 +22,9 @@ export const ProfileWrapper = styled('section', {
   span: {
     color: '$violet11',
     backgroundColor: '$violet3',
+    fontWeight: '300',
+    padding: '6px 10px',
+    borderRadius: '100px',
   },
 
   '@media (min-width: 993px)': {

@@ -1,6 +1,4 @@
-import { useRouter } from 'next/router';
-
-import { getClient, usePreviewSubscription } from '../utils/sanity';
+import { getClient } from '../utils/sanity';
 
 import { HeroImage } from '@/components/hero-image';
 import { Layout } from '@/components/layout';
@@ -15,13 +13,7 @@ const query = `//groq
 }
 `;
 
-export default function Home({ frontPageData, preview }) {
-  const router = useRouter();
-  const { data: frontPage } = usePreviewSubscription(query, {
-    initialData: frontPageData,
-    enabled: preview || router.query.preview !== null,
-  });
-
+export default function Home({ frontPage }) {
   return (
     <Layout>
       {frontPage && (
@@ -42,12 +34,12 @@ export default function Home({ frontPageData, preview }) {
 }
 
 export async function getStaticProps({ preview = false }) {
-  const frontPageData = await getClient(preview).fetch(query);
+  const frontPage = await getClient(preview).fetch(query);
 
   return {
     props: {
       preview,
-      frontPageData,
+      frontPage,
     },
   };
 }

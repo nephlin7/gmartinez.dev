@@ -1,4 +1,5 @@
 import '../css/reset.css';
+
 import { ThemeProvider } from 'next-themes';
 
 import { darkTheme } from '@/utils/stitches.config';

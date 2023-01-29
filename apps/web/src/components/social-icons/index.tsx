@@ -1,4 +1,4 @@
-import { IconBrandLinkedin, IconBrandTwitter, IconBrandGithub, IconBrandDribbble } from '@tabler/icons';
+import { IconBrandLinkedin, IconBrandTwitter, IconBrandGithub, IconBrandDribbble } from '@tabler/icons-react';
 
 import { SocialIconsWrapper } from './social-icons.styles';
 

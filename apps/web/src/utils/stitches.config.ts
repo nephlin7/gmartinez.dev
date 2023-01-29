@@ -11,6 +11,9 @@ export const { styled, css, globalCss, getCssText, theme, createTheme, config } 
 
       figureBg: slate.slate12,
     },
+    fonts: {
+      primary: 'Hubot Sans',
+    },
     shadows: {
       default: `0 25px 50px -12px ${slateDark.slate4}`,
     },

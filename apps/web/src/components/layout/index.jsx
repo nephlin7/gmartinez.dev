@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+
 import Head from 'next/head';
 
 import { PageWrapper } from './layout.styles';
