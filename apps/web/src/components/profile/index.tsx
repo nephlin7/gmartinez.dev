@@ -20,7 +20,11 @@ export function Profile({ heading, subHeading, excerpt, posts = [] }: Props) {
     <ProfileWrapper>
       <span>{subHeading}</span>
       <h1>{heading}</h1>
-      {excerpt && <PortableTextWrapper>{<PortableText value={excerpt} />}</PortableTextWrapper>}
+      {excerpt && (
+        <PortableTextWrapper>
+          <PortableText value={excerpt} />
+        </PortableTextWrapper>
+      )}
 
       <br />
       <BlogList>

@@ -10,6 +10,7 @@ export const { styled, css, globalCss, getCssText, theme, createTheme, config } 
       ...slate,
 
       figureBg: slate.slate12,
+      bodyBg: 'linear-gradient(to top, rgb(223, 233, 243) 0%, white 100%)',
     },
     fonts: {
       primary: 'Hubot Sans',
@@ -29,6 +30,7 @@ export const darkTheme = createTheme({
     ...slateDark,
 
     figureBg: slate.slate12,
+    bodyBg: slate.slate12,
   },
   shadows: {
     default: `0 25px 50px -12px ${slateDark.slate1}`,
@@ -37,7 +39,7 @@ export const darkTheme = createTheme({
 
 const GlobalStyles = globalCss({
   body: {
-    background: '$slate1',
+    background: '$bodyBg',
   },
 });
 
