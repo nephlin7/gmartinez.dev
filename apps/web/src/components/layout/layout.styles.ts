@@ -1,10 +1,12 @@
 import { styled } from '@/utils/stitches.config';
 
-export const PageWrapper = styled('main', {
+export const PageWrapper = styled('div', {
   maxWidth: '100%',
-  maxHeight: '100vh',
+  height: '100vh',
   overflow: 'hidden',
   display: 'flex',
+  flexDirection: 'column',
   alignItems: 'center',
-  justifyContent: 'space-between',
+  justifyContent: 'center',
+  fontSize: 18,
 });

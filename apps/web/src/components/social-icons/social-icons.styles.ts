@@ -3,7 +3,6 @@ import { styled } from '@/utils/stitches.config';
 export const SocialIconsWrapper = styled('ul', {
   position: 'absolute',
   bottom: '30px',
-  right: '30px',
   display: 'inline-flex',
 
   li: {

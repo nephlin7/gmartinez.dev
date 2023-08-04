@@ -1,6 +1,5 @@
 import { getClient } from '../utils/sanity';
 
-import { HeroImage } from '@/components/hero-image';
 import { Layout } from '@/components/layout';
 import { Profile } from '@/components/profile';
 import { SocialIcons } from '@/components/social-icons';
@@ -19,7 +18,6 @@ export default function Home({ frontPage }) {
       {frontPage && (
         <>
           <ThemeToggle />
-          <HeroImage image={frontPage.mainImage} />
           <Profile
             heading={frontPage.heading}
             subHeading={frontPage.subHeading}
