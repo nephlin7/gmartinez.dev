@@ -81,3 +81,25 @@ html {
     "Liberation Mono", Menlo, Courier, monospace;
 }
 
+body{
+  position: relative;
+  -webkit-text-size-adjust: 100%;
+}
+
+body:before{
+  --cal: calc(8.3333333333% - 1px);
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    mix-blend-mode: difference;
+    background: repeating-linear-gradient(to left, rgba(245, 242, 235, 0) 0 var(--cal), rgb(245 242 235 / 15%) var(--cal) calc(var(--cal) + 1px));
+    --to-opacity: 0.2;
+    opacity: var(--to-opacity);
+}

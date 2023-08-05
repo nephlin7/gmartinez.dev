@@ -3,18 +3,19 @@ import { styled } from '@/utils/stitches.config';
 export const ProfileWrapper = styled('section', {
   position: 'relative',
   left: 0,
-  paddingLeft: '20px',
   width: '80%',
+
+  fontSize: '0.9rem',
 
   h1: {
     fontFamily: 'var(--bodoni)',
-    fontSize: '50px',
+    fontSize: '35px',
     marginBottom: '15px',
     color: '$slate12',
     fontWeight: '800',
     fontStyle: 'italic',
 
-    '@media (min-width: 1200px)': {
+    '@media (min-width: 993px)': {
       fontSize: '70px',
     },
   },
@@ -29,16 +30,22 @@ export const ProfileWrapper = styled('section', {
     color: '$violet11',
     backgroundColor: '$violet3',
     fontWeight: '300',
-    padding: '6px 20px',
+    padding: '6px 10px',
     borderRadius: '100px',
-    fontSize: '0.8rem',
+    fontSize: '0.5rem',
     letterSpacing: 1,
+
+    '@media (min-width: 993px)': {
+      padding: '6px 20px',
+      fontSize: '0.8rem',
+    },
   },
 
-  '@media (min-width: 1200px)': {
+  '@media (min-width: 993px)': {
     width: '50%',
     left: '100px',
     paddingLeft: 0,
+    fontSize: '1rem',
 
     p: {
       maxWidth: '80%',
@@ -59,7 +66,6 @@ export const BlogList = styled('ul', {
   li: {
     marginBottom: '10px',
     a: {
-      marginLeft: '10px',
       marginRight: '10px',
       color: '$slate12',
       textDecoration: 'none',
