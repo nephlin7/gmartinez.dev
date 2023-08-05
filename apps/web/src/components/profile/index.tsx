@@ -1,4 +1,4 @@
-import { ProfileWrapper, PortableTextWrapper, BlogList } from './profile.styles';
+import { ProfileWrapper, PortableTextWrapper, BlogList, HeadingWrapper } from './profile.styles';
 
 import { PortableText } from '@/utils/sanity';
 
@@ -18,15 +18,17 @@ interface Props {
 export function Profile({ heading, subHeading, excerpt, posts = [] }: Props) {
   return (
     <ProfileWrapper>
-      <span>{subHeading}</span>
-      <h1>{heading}</h1>
+      <HeadingWrapper>
+        <span>{subHeading}</span>
+        <h1>{heading}</h1>
+      </HeadingWrapper>
+
       {excerpt && (
         <PortableTextWrapper>
           <PortableText value={excerpt} />
         </PortableTextWrapper>
       )}
 
-      <br />
       <BlogList>
         {posts.map((item) => (
           <li key={item.url}>

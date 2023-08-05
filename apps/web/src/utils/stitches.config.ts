@@ -40,6 +40,7 @@ export const darkTheme = createTheme({
 const GlobalStyles = globalCss({
   body: {
     background: '$bodyBg',
+    transition: 'background .3s',
   },
 });
 

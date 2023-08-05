@@ -1,4 +1,16 @@
+import { keyframes } from '@stitches/react';
+
 import { styled } from '@/utils/stitches.config';
+
+const slideUp = keyframes({
+  '0%': { transform: 'translate(0,100%)', opacity: 0 },
+  '100%': { transform: 'translate(0,0)', opacity: 1 },
+});
+
+const fedeIn = keyframes({
+  '0%': { opacity: 0 },
+  '100%': { opacity: 1 },
+});
 
 export const ProfileWrapper = styled('section', {
   position: 'relative',
@@ -14,6 +26,11 @@ export const ProfileWrapper = styled('section', {
     color: '$slate12',
     fontWeight: '800',
     fontStyle: 'italic',
+    transform: 'translate(0,100%)',
+    animation: `${slideUp} 1.5s cubic-bezier(0.77, 0, 0.175, 1);`,
+    animationIterationCount: 1,
+    transformOrigin: '50% 50%',
+    animationFillMode: 'forwards',
 
     '@media (min-width: 993px)': {
       fontSize: '70px',
@@ -24,6 +41,7 @@ export const ProfileWrapper = styled('section', {
     lineHeight: '1.7',
     marginBottom: '15px',
     color: '$slate11',
+    animation: `${fedeIn} 1.5s cubic-bezier(0.77, 0, 0.175, 1);`,
   },
 
   span: {
@@ -34,6 +52,7 @@ export const ProfileWrapper = styled('section', {
     borderRadius: '100px',
     fontSize: '0.5rem',
     letterSpacing: 1,
+    animation: `${fedeIn} 1s cubic-bezier(0.77, 0, 0.175, 1);`,
 
     '@media (min-width: 993px)': {
       padding: '6px 20px',
@@ -53,6 +72,10 @@ export const ProfileWrapper = styled('section', {
   },
 });
 
+export const HeadingWrapper = styled('div', {
+  overflow: 'hidden',
+});
+
 export const PortableTextWrapper = styled('div', {
   p: {
     lineHeight: '1.7',
@@ -66,6 +89,7 @@ export const BlogList = styled('ul', {
   li: {
     marginBottom: '10px',
     a: {
+      animation: `${fedeIn} 2s cubic-bezier(0.77, 0, 0.175, 1);`,
       marginRight: '10px',
       color: '$slate12',
       textDecoration: 'none',
