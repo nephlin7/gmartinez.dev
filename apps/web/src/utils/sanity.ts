@@ -1,14 +1,7 @@
-import type { PortableTextProps } from '@portabletext/react';
-import { PortableText as PortableTextComponent } from '@portabletext/react';
-import type {
-  PortableTextBlock,
-  PortableTextMarkDefinition,
-  ArbitraryTypedObject,
-  PortableTextSpan,
-} from '@portabletext/types';
+
 import createImageUrlBuilder from '@sanity/image-url';
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
-import { createClient } from 'next-sanity';
+import { createClient } from '@sanity/client/stega'
 
 const config = {
   /**
@@ -44,16 +37,7 @@ const sanityImageBuilder = createImageUrlBuilder(config);
 
 export const urlFor = (source: SanityImageSource) => sanityImageBuilder.image(source);
 
-// Set up Portable Text serialization
-export const PortableText = (
-  props: JSX.IntrinsicAttributes &
-    PortableTextProps<
-      PortableTextBlock<PortableTextMarkDefinition, ArbitraryTypedObject | PortableTextSpan, string, string>
-    >,
-) => {
-  return <PortableTextComponent components={{}} {...props} />;
-};
-// Set up the client for fetching data in the getProps page functions
+// @ts-ignore
 export const sanityClient = createClient(config);
 // Set up a preview client with serverless authentication for drafts
 

@@ -1,6 +1,6 @@
 import { ProfileWrapper, PortableTextWrapper, BlogList, HeadingWrapper } from './profile.styles';
 
-import { PortableText } from '@/utils/sanity';
+import { PortableText } from '@portabletext/react';
 
 interface Posts {
   title: string;

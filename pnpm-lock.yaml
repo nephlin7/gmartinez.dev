@@ -55,11 +55,14 @@ importers:
   apps/web:
     dependencies:
       '@portabletext/react':
-        specifier: ^2.0.1
+        specifier: ^2.0.3
         version: 2.0.3(react@18.2.0)
       '@radix-ui/colors':
         specifier: ^0.1.8
         version: 0.1.9
+      '@sanity/client':
+        specifier: ^6.10.0
+        version: 6.10.0
       '@sanity/image-url':
         specifier: ^1.0.2
         version: 1.0.2
