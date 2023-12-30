@@ -74,6 +74,7 @@ export const ProfileWrapper = styled('section', {
 
 export const HeadingWrapper = styled('div', {
   overflow: 'hidden',
+  paddingTop: 7
 });
 
 export const PortableTextWrapper = styled('div', {

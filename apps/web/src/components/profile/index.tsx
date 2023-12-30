@@ -38,6 +38,11 @@ export function Profile({ heading, subHeading, excerpt, posts = [] }: Props) {
           </li>
         ))}
       </BlogList>
+      <div style={{ textAlign: 'center', marginTop: 60 }}>
+        <div>
+          <a>Unlock Insights: Hear from Those I've Worked With</a>
+        </div>
+      </div>
     </ProfileWrapper>
   );
 }
