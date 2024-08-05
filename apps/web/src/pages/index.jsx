@@ -1,16 +1,15 @@
-import { getClient } from '../utils/sanity';
+import { client } from '../sanity/client';
+import { groq } from 'next-sanity';
 
 import { Layout } from '@/components/layout';
 import { Profile } from '@/components/profile';
 import { SocialIcons } from '@/components/social-icons';
 import { ThemeToggle } from '@/components/theme-toggle';
 
-const query = `//groq
-*[_id == "frontPage"][0]{
+export const FRONTPAGE_QUERY = groq`*[_id == "frontPage"][0]{
   ...,
   'externalPosts': externalPosts[]->{title, url, emoji},
-}
-`;
+}`;
 
 export default function Home({ frontPage }) {
   return (
@@ -32,7 +31,7 @@ export default function Home({ frontPage }) {
 }
 
 export async function getStaticProps({ preview = false }) {
-  const frontPage = await getClient(preview).fetch(query);
+  const frontPage = await client.fetch(FRONTPAGE_QUERY);
 
   return {
     props: {
