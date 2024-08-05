@@ -7,6 +7,7 @@
   "dependencies": {
     "@portabletext/react": "^2.0.3",
     "@radix-ui/colors": "^0.1.8",
+    "@sanity/client": "^6.21.1",
     "@sanity/image-url": "^1.0.2",
     "@stitches/react": "^1.2.8",
     "@tabler/icons-react": "^2.1.2",
