@@ -1,21 +1,21 @@
-import { defineType } from 'sanity';
+import { defineType, defineField } from 'sanity';
 
 export default defineType({
   name: 'frontPage',
   type: 'document',
   title: 'Front Page',
   fields: [
-    {
+    defineField({
       name: 'heading',
       type: 'string',
       title: 'Heading',
-    },
-    {
+    }),
+    defineField({
       title: 'Sub Heading',
       name: 'subHeading',
       type: 'string',
-    },
-    {
+    }),
+    defineField({
       name: 'mainImage',
       type: 'image',
       title: 'Image',
@@ -48,8 +48,8 @@ export default defineType({
           title: 'caption',
         },
       },
-    },
-    {
+    }),
+    defineField({
       name: 'excerpt',
       title: 'Excerpt',
       type: 'array',
@@ -68,8 +68,8 @@ export default defineType({
           },
         },
       ],
-    },
-    {
+    }),
+    defineField( {
       title: 'External Posts items',
       name: 'externalPosts',
       type: 'array',
@@ -79,6 +79,6 @@ export default defineType({
           to: [{ type: 'externalPost' }],
         },
       ],
-    },
+    }),
   ],
 });

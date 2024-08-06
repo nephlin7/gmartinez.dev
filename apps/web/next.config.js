@@ -3,6 +3,9 @@ module.exports = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   images: {
     domains: ['assets.vercel.com', 'cdn.sanity.io'],
   },

@@ -1,27 +1,27 @@
-import { defineType } from 'sanity';
+import { defineType, defineField } from 'sanity';
 
 export default defineType({
   name: 'siteSettings',
   type: 'document',
   title: 'Site settings',
   fields: [
-    {
+    defineField({
       name: 'title',
       type: 'string',
       title: 'Site title',
-    },
-    {
+    }),
+    defineField({
       title: 'URL',
       name: 'url',
       type: 'url',
       description: 'The main site url. Used to create canonical url',
-    },
-    {
+    }),
+    defineField({
       title: 'Site language',
       name: 'lang',
       type: 'string',
-    },
-    {
+    }),
+    defineField({
       title: 'Brand logo',
       description: 'Best choice is to use an SVG where the color are set with currentColor',
       name: 'logo',
@@ -38,8 +38,8 @@ export default defineType({
           },
         },
       ],
-    },
-    {
+    }),
+    defineField({
       title: 'Footer social media items',
       name: 'footerSocialMedia',
       type: 'array',
@@ -53,6 +53,6 @@ export default defineType({
           to: [{ type: 'socialMedia' }],
         },
       ],
-    },
+    }),
   ],
 });
