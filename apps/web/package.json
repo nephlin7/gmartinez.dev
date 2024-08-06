@@ -9,17 +9,20 @@
     "@radix-ui/colors": "^0.1.8",
     "@sanity/client": "^6.21.1",
     "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "3",
     "@stitches/react": "^1.2.8",
     "@tabler/icons-react": "^2.1.2",
     "clsx": "^2.0.0",
     "eslint-config-next": "^13.1.6",
     "next": "^13.4.12",
-    "next-sanity": "^4.3.4",
+    "next-sanity": "^9.4.3",
     "next-themes": "^0.2.1",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.57.1"
+    "sanity": "^3.52.4",
+    "sass": "^1.57.1",
+    "styled-components": "6"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
