@@ -1,36 +1,50 @@
 import { IconBrandLinkedin, IconBrandTwitter, IconBrandGithub, IconBrandDribbble } from '@tabler/icons-react';
 
-import { SocialIconsWrapper } from './social-icons.styles';
+interface SocialLinkProps {
+  href: string;
+  title: string;
+  icon: React.ReactNode | JSX.Element;
+}
+
+function SocialLink({ href, title, icon }: SocialLinkProps) {
+  return (
+    <li>
+      <a rel="noopener noreferrer" target="_blank" href={href} title={title}>
+        {icon}
+      </a>
+    </li>
+  );
+}
 
 export function SocialIcons() {
+  const socialLinks = [
+    {
+      href: 'https://github.com/nephlin7',
+      title: 'Go to my Github',
+      icon: <IconBrandGithub />,
+    },
+    {
+      href: 'https://www.linkedin.com/in/gmartinez92/',
+      title: 'Go to my Linkedin',
+      icon: <IconBrandLinkedin />,
+    },
+    {
+      href: 'https://dribbble.com/geraldM',
+      title: 'Go to my portfolio',
+      icon: <IconBrandDribbble />,
+    },
+    {
+      href: 'https://twitter.com/GeraldM_92',
+      title: 'Follow me on Twitter',
+      icon: <IconBrandTwitter />,
+    },
+  ];
+
   return (
-    <SocialIconsWrapper>
-      <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://github.com/nephlin7" title="Go to my Github">
-          <IconBrandGithub />
-        </a>
-      </li>
-      <li>
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          href="https://www.linkedin.com/in/gmartinez92/"
-          title="Go to my Linkedin"
-        >
-          <IconBrandLinkedin />
-        </a>
-      </li>
-      <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://dribbble.com/geraldM" title="Go to my portfolio">
-          <IconBrandDribbble />
-        </a>
-      </li>
-      <li>
-        {' '}
-        <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/GeraldM_92" title="Follow me on Twitter">
-          <IconBrandTwitter />
-        </a>
-      </li>
-    </SocialIconsWrapper>
+    <ul className="absolute bottom-[30px] inline-flex">
+      {socialLinks.map((link) => (
+        <SocialLink key={link.href} {...link} />
+      ))}
+    </ul>
   );
 }
