@@ -3,7 +3,7 @@ import { IconBrandLinkedin, IconBrandTwitter, IconBrandGithub, IconBrandDribbble
 interface SocialLinkProps {
   href: string;
   title: string;
-  icon: React.ReactNode | JSX.Element;
+  icon: React.ReactNode;
 }
 
 function SocialLink({ href, title, icon }: SocialLinkProps) {
@@ -41,7 +41,7 @@ export function SocialIcons() {
   ];
 
   return (
-    <ul className="absolute bottom-[30px] inline-flex">
+    <ul className="absolute bottom-[30px] inline-flex gap-2">
       {socialLinks.map((link) => (
         <SocialLink key={link.href} {...link} />
       ))}

@@ -21,9 +21,9 @@ export function ThemeToggle() {
     <div className="absolute top-[30px] right-[30px]">
       <button onClick={handleToggleTheme} className="bg-transparent border-none text-[20px] cursor-pointer">
         {theme === 'dark' ? (
-          <IconSun className="w-[30px] h-[30px] text-violet-600" />
+          <IconSun className="w-[30px] h-[30px] text-amber-300" />
         ) : (
-          <IconMoon className="w-[30px] h-[30px] text-violet-600" />
+          <IconMoon className="w-[30px] h-[30px] text-blue-950" />
         )}
       </button>
     </div>

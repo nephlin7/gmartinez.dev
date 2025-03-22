@@ -5,6 +5,7 @@ import { Bodoni_Moda, Jost } from 'next/font/google';
 import { ThemeProvider } from './theme-provider';
 
 import config from '@/utils/config';
+import clsx from 'clsx';
 
 const bodoni = Bodoni_Moda({
   weight: ['800'],
@@ -63,16 +64,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property="twitter:description" content={config?.description} />
         <meta property="twitter:image" content={config?.seoImageUrl} />
       </head>
-      <body className={`${bodoni.variable} ${jost.className}`}>
-        <ThemeProvider>
+      <ThemeProvider>
+        <body
+          className={clsx(
+            bodoni.variable,
+            jost.className,
+            'bg-gradient-to-t from-[#dfe9f3] to-white dark:from-slate-950 dark:to-slate-800',
+          )}
+        >
           <div className="max-w-full h-screen overflow-hidden flex flex-col items-center justify-center text-lg">
             {children}
           </div>
-        </ThemeProvider>
-        {process.env.NEXT_PUBLIC_ANALYTICS_ENV === 'production' && (
-          <script src="https://statsy.observer/cl8mft4re05860cp9lomo8hq5.js" defer />
-        )}
-      </body>
+        </body>
+      </ThemeProvider>
+      {process.env.NEXT_PUBLIC_ANALYTICS_ENV === 'production' && (
+        <script src="https://statsy.observer/cl8mft4re05860cp9lomo8hq5.js" defer />
+      )}
     </html>
   );
 }
