@@ -1,7 +1,7 @@
 # Personal Website
 
 This is the front-end for my personal resume site
-gmartinez.dev
+gmartinez.work
 
 Made with Nextjs & Sanity, hosted on Vercel
 
