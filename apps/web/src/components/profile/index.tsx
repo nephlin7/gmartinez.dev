@@ -1,5 +1,3 @@
-import { ProfileWrapper, PortableTextWrapper, BlogList, HeadingWrapper } from './profile.styles';
-
 import { PortableText } from '@portabletext/react';
 
 interface Posts {
@@ -17,27 +15,29 @@ interface Props {
 
 export function Profile({ heading, subHeading, excerpt, posts = [] }: Props) {
   return (
-    <ProfileWrapper>
-      <HeadingWrapper>
-        <span>{subHeading}</span>
-        <h1>{heading}</h1>
-      </HeadingWrapper>
+    <section className="relative left-0 w-4/5 text-[0.9rem] lg:w-1/2 lg:left-[100px] lg:pl-0 lg:text-base">
+      <div className="overflow-hidden mb-8 flex flex-col gap-4">
+        <span className="text-xs tracking-widest bg-slate-200 text-slate-800 dark:bg-slate-700 dark:text-slate-400 px-4 py-1 rounded-3xl flex w-fit">
+          {subHeading}
+        </span>
+        <h1 className="text-4xl xl:text-7xl font-bodoni italic">{heading}</h1>
+      </div>
 
       {excerpt && (
-        <PortableTextWrapper>
+        <div className="[&>p]:leading-[1.7] [&>p]:mb-[15px] [&>p]:text-slate-700 [&>p]:dark:text-slate-400">
           <PortableText value={excerpt} />
-        </PortableTextWrapper>
+        </div>
       )}
 
-      <BlogList>
+      <ul className="p-0 ">
         {posts.map((item) => (
-          <li key={item.url}>
+          <li key={item.url} className="mb-3  ">
             <a href={item.url} rel="noreferrer noopener" target="_blank">
               {item.emoji} {item.title}
             </a>
           </li>
         ))}
-      </BlogList>
-    </ProfileWrapper>
+      </ul>
+    </section>
   );
 }

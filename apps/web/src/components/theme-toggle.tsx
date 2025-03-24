@@ -1,8 +1,8 @@
+'use client';
+
 import { IconMoon, IconSun } from '@tabler/icons-react';
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
-
-import { styled } from '@/utils/stitches.config';
 
 export function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
@@ -18,27 +18,14 @@ export function ThemeToggle() {
   }
 
   return (
-    <ToggleBox>
-      <ThemeToggleButton onClick={handleToggleTheme}>{theme === 'dark' ? <IconSun /> : <IconMoon />}</ThemeToggleButton>
-    </ToggleBox>
+    <div className="absolute top-[30px] right-[30px]">
+      <button onClick={handleToggleTheme} className="bg-transparent border-none text-[20px] cursor-pointer">
+        {theme === 'dark' ? (
+          <IconSun className="w-[30px] h-[30px] text-amber-300" />
+        ) : (
+          <IconMoon className="w-[30px] h-[30px] text-blue-950" />
+        )}
+      </button>
+    </div>
   );
 }
-
-const ToggleBox = styled('div', {
-  position: 'absolute',
-  top: 30,
-  right: 30,
-});
-
-const ThemeToggleButton = styled('button', {
-  background: 'none',
-  border: 'none',
-  fontSize: '20px',
-  cursor: 'pointer',
-
-  svg: {
-    width: '30px',
-    height: '30px',
-    color: '$violet12',
-  },
-});
