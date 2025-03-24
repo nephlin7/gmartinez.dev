@@ -20,7 +20,7 @@ export function Profile({ heading, subHeading, excerpt, posts = [] }: Props) {
         <span className="text-xs tracking-widest bg-slate-200 text-slate-800 dark:bg-slate-700 dark:text-slate-400 px-4 py-1 rounded-3xl flex w-fit">
           {subHeading}
         </span>
-        <h1 className="text-7xl font-bodoni italic">{heading}</h1>
+        <h1 className="text-3xl lg:text-7xl font-bodoni italic">{heading}</h1>
       </div>
 
       {excerpt && (
